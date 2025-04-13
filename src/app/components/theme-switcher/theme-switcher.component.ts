@@ -1,6 +1,3 @@
-
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { Component, computed, effect, inject, PLATFORM_ID, signal } from '@angular/core';
 import { $t, updatePreset, updateSurfacePalette } from '@primeng/themes';
 import Aura from '@primeng/themes/aura';
@@ -8,100 +5,30 @@ import Lara from '@primeng/themes/lara';
 import Material from '@primeng/themes/material';
 import Nora from '@primeng/themes/nora';
 import { PrimeNG } from 'primeng/config';
-import { SelectButtonModule } from 'primeng/selectbutton';
-import { StyleClassModule } from 'primeng/styleclass';
-import { ToggleSwitchModule } from 'primeng/toggleswitch';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 
+
 const presets = {
-    Aura,
-    Material,
-    Lara,
-    Nora
+  Aura,
+  Material,
+  Lara,
+  Nora
 };
 
 export interface ThemeState {
-    preset?: string;
-    primary?: string;
-    surface?: string;
-    darkTheme?: boolean;
+  preset?: string;
+  primary?: string;
+  surface?: string;
+  darkTheme?: boolean;
 }
 
 @Component({
-    selector: 'theme-switcher',
-    standalone: true,
-    imports: [CommonModule, FormsModule, StyleClassModule, SelectButtonModule, ToggleSwitchModule],
-    template: ` <div class="card flex justify-end p-2 mb-4">
-        <ul class="flex list-none m-0 p-0 gap-2 items-center">
-            <li>
-                <button type="button" class="inline-flex w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded" (click)="onThemeToggler()">
-                    <i [ngClass]="'pi ' + iconClass()" class="dark:text-white"></i>
-                </button>
-            </li>
-            <li class="relative">
-                <button
-                    pStyleClass="@next"
-                    enterFromClass="hidden"
-                    enterActiveClass="animate-scalein"
-                    leaveToClass="hidden"
-                    leaveActiveClass="animate-fadeout"
-                    [hideOnOutsideClick]="true"
-                    type="button"
-                    class="inline-flex w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded"
-                >
-                    <i class="pi pi-palette dark:text-white"></i>
-                </button>
-                <div class="absolute top-[2.5rem] right-0 w-[18rem] p-3 bg-white dark:bg-surface-800 rounded-md shadow border border-surface-200 dark:border-surface-700 flex-col justify-start items-start gap-3.5 inline-flex origin-top z-10">
-                    <div class="flex-col justify-start items-start gap-2 inline-flex pr-4">
-                        <span class="text-sm font-medium">Primary Colors</span>
-                        <div class="self-stretch justify-start items-start gap-2 inline-flex flex-wrap">
-                            @for (primaryColor of primaryColors(); track primaryColor.name) {
-                                <button
-                                    type="button"
-                                    [title]="primaryColor.name"
-                                    (click)="updateColors($event, 'primary', primaryColor)"
-                                    class="outline outline-2 outline-offset-1 outline-transparent cursor-pointer p-0 rounded-[50%] w-5 h-5"
-                                    [ngStyle]="{
-                                        'background-color': primaryColor.name === 'noir' ? 'var(--text-color)' : primaryColor.palette['500'],
-                                        'outline-color': selectedPrimaryColor() === primaryColor.name ? 'var(--p-primary-color)' : ''
-                                    }"
-                                ></button>
-                            }
-                        </div>
-                    </div>
-                    <div class="flex-col justify-start items-start gap-2 inline-flex pr-2">
-                        <span class="text-sm font-medium">Surface Colors</span>
-                        <div class="self-stretch justify-start items-start gap-2 inline-flex">
-                            @for (surface of surfaces; track surface.name) {
-                                <button
-                                    type="button"
-                                    [title]="surface.name"
-                                    (click)="updateColors($event, 'surface', surface)"
-                                    class="outline outline-2 outline-offset-1 outline-transparent cursor-pointer p-0 rounded-[50%] w-5 h-5"
-                                    [ngStyle]="{
-                                        'background-color': surface.palette['500'],
-                                        'outline-color': selectedSurfaceColor() === surface.name ? 'var(--p-primary-color)' : ''
-                                    }"
-                                ></button>
-                            }
-                        </div>
-                    </div>
-                    <div class="flex-col justify-start items-start gap-2 inline-flex w-full">
-                        <span class="text-sm font-medium">Preset</span>
-                        <div class="inline-flex p-[0.28rem] items-start gap-[0.28rem] rounded-[0.71rem] border border-[#00000003] w-full">
-                            <p-selectbutton [options]="presets" [ngModel]="selectedPreset()" (ngModelChange)="onPresetChange($event)" [unselectable]="false" size="small" />
-                        </div>
-                    </div>
-                    <div class="inline-flex flex-col justify-start items-start gap-2 w-full pt-4 pb-2">
-                        <span class="text-sm font-medium m-0">Ripple Effect</span>
-                        <p-toggleswitch [(ngModel)]="ripple" />
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>`
+  selector: 'app-theme-switcher',
+  standalone: false,
+  templateUrl: './theme-switcher.component.html',
+  styleUrl: './theme-switcher.component.scss'
 })
-export class ThemeSwitcher {
+export class ThemeSwitcherComponent {
   private readonly STORAGE_KEY = 'themeSwitcherState';
 
   document = inject(DOCUMENT);

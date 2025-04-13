@@ -1,22 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ImportsModule } from '../imports';
-import { Ripple } from 'primeng/ripple';
-import { StyleClass } from 'primeng/styleclass';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
 
 @NgModule({
   declarations: [
-    SidebarComponent
+    SidebarComponent,
+    ThemeSwitcherComponent
   ],
   imports: [
     CommonModule,
     ImportsModule,
-    Ripple,
-    StyleClass
   ],
   exports: [
-    SidebarComponent
+    SidebarComponent,
+    ThemeSwitcherComponent
   ]
 })
 export class ComponentsModule { }
