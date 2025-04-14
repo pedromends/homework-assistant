@@ -100,6 +100,25 @@ export class MenuComponent {
                         ]
                     },
                     {
+                        label: 'Estatísticas',
+                        icon: 'pi pi-fw pi-undo',
+                        items: [
+                            {
+                                label: 'Submenu 2.1',
+                                icon: 'pi pi-fw pi-question',
+                                items: [
+                                    { label: 'Submenu 2.1.1', icon: 'pi pi-fw pi-question' },
+                                    { label: 'Submenu 2.1.2', icon: 'pi pi-fw pi-question' }
+                                ]
+                            },
+                            {
+                                label: 'Submenu 2.2',
+                                icon: 'pi pi-fw pi-question',
+                                items: [{ label: 'Submenu 2.2.1', icon: 'pi pi-fw pi-question' }]
+                            }
+                        ]
+                    },
+                    {
                         label: 'Calendário',
                         icon: 'pi pi-fw pi-calendar',
                         items: [
