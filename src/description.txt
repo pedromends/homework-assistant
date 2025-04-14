@@ -1,0 +1,157 @@
+Wireframe Textual — Aplicativo de Estudo
+
+📍 Navegação Principal
+
+Aba lateral fixa à esquerda com as seguintes seções:
+
+Dashboard
+
+Estudo
+
+Resumos
+
+Revisão
+
+Calendário de Provas
+
+Estatísticas
+
+🏠 Dashboard (Visão Geral)
+
+Tela inicial do aplicativo ao abrir
+
+Informações exibidas:
+
+Total de questões resolvidas
+
+Tópicos e matérias estudados
+
+Gráficos de desempenho por matéria (Matemática, História, Física...)
+
+Indicadores de progresso para alcançar nota 10 por matéria
+
+Resumo das últimas atividades (tarefas, estudos, revisões)
+
+📚 Estudo
+
+Seção principal para enviar tarefas, estudar e resolver questões
+
+Subseções:
+
+1. Tarefa
+
+Upload de foto ou escrita da tarefa
+
+Ao concluir: redirecionamento automático para a próxima etapa de estudo
+
+2. Estudo Guiado
+
+Seleção em 3 níveis: Matéria → Assunto → Tópico
+
+Opções após o estudo:
+
+Estudar novo assunto
+
+Resolver questões sobre o conteúdo
+
+Gerar resumo automático com base no conteúdo estudado
+
+3. Questões
+
+Opções disponíveis:
+
+Fazer novas questões
+
+Aumentar o nível de dificuldade
+
+Escolher assunto específico para revisar
+
+Voltar ao dashboard para acompanhar o progresso
+
+📝 Resumos
+
+Central de resumos criados automaticamente ou manualmente
+
+Organização:
+
+Exibição por matéria
+
+Tipos de resumos:
+
+A partir de tarefas
+
+Após sessões de estudo
+
+Após resolução de questões
+
+🔀 Revisão com Flashcards (Método Anki)
+
+Ferramenta de revisão espaçada baseada em flashcards
+
+Opções:
+
+Revisar conteúdo (conceitos, resumos)
+
+Revisar questões (exercícios resolvidos anteriormente)
+
+Personalização:
+
+Escolher matéria e assunto
+
+Sistema sugere tópicos com base:
+
+No desempenho do aluno
+
+Na proximidade da prova
+
+Em revisões diárias e espaçadas (algoritmo estilo Anki)
+
+🗓️ Calendário de Provas
+
+Planejador de estudos e revisões com base em avaliações futuras
+
+Funcionalidades:
+
+Inserção de datas de provas
+
+Integração com o sistema de revisão:
+
+Sugestão automática de tópicos a estudar conforme a data se aproxima
+
+Reforço de assuntos críticos nas semanas finais
+
+📊 Estatísticas
+
+Painel de desempenho detalhado por matéria, assunto e tópico
+
+Indicadores:
+
+Progresso por disciplina
+
+Tópicos que precisam ser reforçados
+
+O que falta para atingir nota máxima (ex: 10)
+
+Gráficos e análises:
+
+Exemplo: História — "Revolução Industrial" e "Terrorismo" com baixa performance
+
+Exemplo: Matemática — tópicos que geram maior número de erros
+
+🔄 Fluxo de Revisão (Passo a Passo)
+
+Abertura do dashboard com panorama do desempenho
+
+Acesso à aba Revisão
+
+Escolha entre revisar conteúdos ou questões
+
+Seleção de matéria e assunto
+
+Apresentação de flashcards com base:
+
+Em tópicos com baixo desempenho
+
+Na data da próxima prova
+
+Aplicação do método de revisão espaçada
