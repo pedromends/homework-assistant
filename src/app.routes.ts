@@ -1,17 +1,15 @@
 import { Routes } from '@angular/router';
-import { AppLayout } from './app/layout/component/app.layout';
 import { DashboardComponent } from './app/pages/public/dashboard/dashboard.component';
+import { LayoutComponent } from './app/components/layout/layout.component';
 
 export const appRoutes: Routes = [
     {
         path: '',
-        component: AppLayout,
+        component: LayoutComponent,
         children: [
             { path: '', component: DashboardComponent },
-            { path: 'uikit', loadChildren: () => import('./app/pages/public/uikit/uikit.routes') },
-            { path: 'pages', loadChildren: () => import('./app/pages/pages.routes') }
+            { path: 'pages', loadChildren: () => import('./app/pages/public/public.module').then(m => m.PublicModule) }
         ]
     },
-    { path: 'auth', loadChildren: () => import('./app/pages/public/auth/auth.routes') },
     { path: '**', redirectTo: '/notfound' }
 ];
