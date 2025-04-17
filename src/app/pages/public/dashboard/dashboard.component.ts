@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RevenueStreamWidget } from './components/revenuestreamwidget';
-import { StatusComponent } from './components/status/status.component';
+import { RevenueStreamWidget } from '../../../components/revenuestreamwidget';
+import { StatusComponent } from '../../../components/status/status.component';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [StatusComponent, RevenueStreamWidget],
+  standalone: false,
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })

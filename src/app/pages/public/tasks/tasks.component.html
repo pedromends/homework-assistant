@@ -1,0 +1,29 @@
+<section>
+    <h2>Seus estudos</h2>
+    <div>
+        <p-card header="Simple Card">
+            <div class="card flex justify-content-center gap-10">
+                <p-dropdown 
+                    [options]="subject" 
+                    [(ngModel)]="selectedSubject" 
+                    optionLabel="name"
+                    placeholder="Matéria" />
+
+                    <p-dropdown 
+                    [options]="topic" 
+                    [(ngModel)]="selectedTopic" 
+                    optionLabel="name"
+                    placeholder="Tópico" />
+
+                    <p-dropdown 
+                    [options]="phase" 
+                    [(ngModel)]="selectedPhase" 
+                    optionLabel="name"
+                    placeholder="Fase" />
+            </div>
+            <p class="m-0">
+                Lorem ipsum dolor sit amet...
+            </p>
+        </p-card>
+    </div>
+</section>

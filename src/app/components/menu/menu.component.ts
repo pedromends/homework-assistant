@@ -22,6 +22,7 @@ export class MenuComponent {
                     {
                         label: 'Tarefa',
                         icon: 'pi pi-fw pi-bookmark',
+                        routerLink: ['/tarefas']
                         // items: [
                         //     {
                         //         label: 'Submenu 1.1',
@@ -42,6 +43,7 @@ export class MenuComponent {
                     {
                         label: 'Estudo',
                         icon: 'pi pi-fw pi-book',
+                        routerLink: ['/estudo']
                         // items: [
                         //     {
                         //         label: 'Submenu 2.1',

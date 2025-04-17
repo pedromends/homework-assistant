@@ -18,12 +18,36 @@ import { RippleModule } from 'primeng/ripple';
 
 
 @NgModule({
-  declarations: [LayoutComponent, TopbarComponent, AppConfigurator, AppFloatingConfigurator, MenuItemComponent, MenuComponent, AppSidebar],
-  imports: [
-    CommonModule, RouterModule, AppFooter, RouterModule, StyleClassModule, FormsModule, SelectButtonModule, ButtonModule, RippleModule
+  declarations: [
+    LayoutComponent,
+    TopbarComponent,
+    AppConfigurator,
+    AppFloatingConfigurator,
+    MenuItemComponent,
+    MenuComponent,
+    AppSidebar
   ],
-  exports:[
-    LayoutComponent, TopbarComponent, AppConfigurator, AppFloatingConfigurator, MenuItemComponent, MenuComponent, AppSidebar
+
+  imports: [
+    CommonModule,
+    RouterModule,
+    AppFooter,
+    RouterModule,
+    StyleClassModule,
+    FormsModule,
+    SelectButtonModule,
+    ButtonModule,
+    RippleModule
+  ],
+
+  exports: [
+    LayoutComponent,
+    TopbarComponent,
+    AppConfigurator,
+    AppFloatingConfigurator,
+    MenuItemComponent,
+    MenuComponent,
+    AppSidebar
   ]
 })
 export class ComponentsModule { }
