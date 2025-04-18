@@ -14,7 +14,11 @@ import { ButtonModule } from 'primeng/button';
 import { MenuItemComponent } from './menu-item/menu-item.component';
 import { MenuComponent } from './menu/menu.component';
 import { RippleModule } from 'primeng/ripple';
-
+import { CardSubjectProgressComponent } from './card-subject-progress/card-subject-progress.component';
+import { StatusComponent } from './status/status.component';
+import { ProgressBarModule } from 'primeng/progressbar';
+// For dynamic progressbar demo
+import { ToastModule } from 'primeng/toast';
 
 
 @NgModule({
@@ -25,7 +29,9 @@ import { RippleModule } from 'primeng/ripple';
     AppFloatingConfigurator,
     MenuItemComponent,
     MenuComponent,
-    AppSidebar
+    AppSidebar,
+    CardSubjectProgressComponent,
+    StatusComponent
   ],
 
   imports: [
@@ -37,7 +43,9 @@ import { RippleModule } from 'primeng/ripple';
     FormsModule,
     SelectButtonModule,
     ButtonModule,
-    RippleModule
+    RippleModule,
+    ProgressBarModule,
+    ToastModule,
   ],
 
   exports: [
@@ -47,7 +55,10 @@ import { RippleModule } from 'primeng/ripple';
     AppFloatingConfigurator,
     MenuItemComponent,
     MenuComponent,
-    AppSidebar
+    AppSidebar,
+    CardSubjectProgressComponent,
+    StatusComponent,
+    ButtonModule
   ]
 })
 export class ComponentsModule { }

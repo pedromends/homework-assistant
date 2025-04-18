@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-status',
-  standalone: true,
-  imports: [CommonModule],
+  standalone: false,
   templateUrl: './status.component.html',
   styleUrl: './status.component.scss'
 })
