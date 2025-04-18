@@ -19,6 +19,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ChartModule } from 'primeng/chart';
 import { DashChartComponent } from './dash-chart/dash-chart.component';
+import { ChatBoxComponent } from './chat-box/chat-box.component';
+import { CardModule } from 'primeng/card';
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import { DashChartComponent } from './dash-chart/dash-chart.component';
     CardSubjectProgressComponent,
     StatusComponent,
     FooterComponent,
-    DashChartComponent
+    DashChartComponent,
+    ChatBoxComponent,
   ],
 
   imports: [
@@ -44,10 +47,10 @@ import { DashChartComponent } from './dash-chart/dash-chart.component';
     ButtonModule,
     RippleModule,
     ProgressBarModule,
+    CardModule,
     ToastModule,
-    ChartModule
+    ChartModule,
   ],
-
   exports: [
     LayoutComponent,
     TopbarComponent,
@@ -57,7 +60,8 @@ import { DashChartComponent } from './dash-chart/dash-chart.component';
     CardSubjectProgressComponent,
     StatusComponent,
     ButtonModule,
-    DashChartComponent
+    DashChartComponent,
+    ChatBoxComponent
   ]
 })
 export class ComponentsModule { }

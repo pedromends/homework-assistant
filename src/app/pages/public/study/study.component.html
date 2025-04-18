@@ -1,1 +1,49 @@
-<p>study works!</p>
+<section>
+    <h2>Seus estudos</h2>
+    <div>
+        <p-card>
+            <div class="card flex justify-content-center gap-10 mb-10">
+                <p-dropdown [options]="subject" [(ngModel)]="selectedSubject" optionLabel="name"
+                    placeholder="Matéria" />
+
+                <p-dropdown [options]="topic" [(ngModel)]="selectedTopic" optionLabel="name" placeholder="Tópico" />
+
+                <p-dropdown [options]="phase" [(ngModel)]="selectedPhase" optionLabel="name" placeholder="Fase" />
+            </div>
+            <div class="flex flex-col gap-10">
+                <p class="m-0">
+                    A Revolução Industrial foi um período de grandes transformações tecnológicas, sociais e econômicas que
+                    teve início na Inglaterra no século XVIII. Este período marcou a transição de métodos de produção
+                    artesanais para a produção por máquinas, caracterizando a mecanização dos processos produtivos.
+                </p>
+                <div class="flex flex-col gap-3">
+                    <p>
+                        Principais características:
+                    </p>
+                    <ul>
+                        <li> Substituição do trabalho manual pelo trabalho mecânico</li>
+                        <li>Desenvolvimento de novas fontes de energia</li>
+                        <li>Surgimento das fábricas e urbanização</li>
+                        <li>Mudanças nas relações de trabalho</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <p>
+                        Principais características:
+                    </p>
+                    <ul>
+                        <li> Êxodo rural</li>
+                        <li>Formação da classe operária</li>
+                        <li>Surgimento de movimentos trabalhistas</li>
+                        <li>Mudanças na organização familiar</li>
+                    </ul>
+                </div>
+                <div class="flex justify-between gap-4">
+                    <p-button label="Gerar Resumo" />
+                    <p-button label="Praticar Questões" />
+                    <p-button label="Novo Assunto" />
+                </div>
+            </div>
+        </p-card>
+    </div>
+</section>

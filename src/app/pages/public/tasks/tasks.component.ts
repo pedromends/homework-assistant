@@ -6,8 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.scss'
 })
-export class TasksComponent implements OnInit {
-  
+export class TasksComponent {
   selectedSubject: undefined;
   selectedTopic: string = "";
   selectedPhase: string = "";
@@ -50,4 +49,5 @@ export class TasksComponent implements OnInit {
       {name:"Tópico 1s"}
     ];
   }
+
 }
