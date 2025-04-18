@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { AppFooter } from './app.footer';
-import { AppSidebar } from './app.sidebar';
 import { LayoutComponent } from './layout/layout.component';
 import { StyleClassModule } from 'primeng/styleclass';
-import { AppConfigurator } from './app.configurator';
 import { TopbarComponent } from './topbar/topbar.component';
 import { FormsModule } from '@angular/forms';
 import { SelectButtonModule } from 'primeng/selectbutton';
-import { AppFloatingConfigurator } from './app.floatingconfigurator';
 import { ButtonModule } from 'primeng/button';
 import { MenuItemComponent } from './menu-item/menu-item.component';
 import { MenuComponent } from './menu/menu.component';
@@ -19,25 +15,28 @@ import { StatusComponent } from './status/status.component';
 import { ProgressBarModule } from 'primeng/progressbar';
 // For dynamic progressbar demo
 import { ToastModule } from 'primeng/toast';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { FooterComponent } from './footer/footer.component';
+import { ChartModule } from 'primeng/chart';
+import { DashChartComponent } from './dash-chart/dash-chart.component';
 
 
 @NgModule({
   declarations: [
     LayoutComponent,
     TopbarComponent,
-    AppConfigurator,
-    AppFloatingConfigurator,
     MenuItemComponent,
     MenuComponent,
-    AppSidebar,
+    SidebarComponent,
     CardSubjectProgressComponent,
-    StatusComponent
+    StatusComponent,
+    FooterComponent,
+    DashChartComponent
   ],
 
   imports: [
     CommonModule,
     RouterModule,
-    AppFooter,
     RouterModule,
     StyleClassModule,
     FormsModule,
@@ -46,19 +45,19 @@ import { ToastModule } from 'primeng/toast';
     RippleModule,
     ProgressBarModule,
     ToastModule,
+    ChartModule
   ],
 
   exports: [
     LayoutComponent,
     TopbarComponent,
-    AppConfigurator,
-    AppFloatingConfigurator,
     MenuItemComponent,
     MenuComponent,
-    AppSidebar,
+    SidebarComponent,
     CardSubjectProgressComponent,
     StatusComponent,
-    ButtonModule
+    ButtonModule,
+    DashChartComponent
   ]
 })
 export class ComponentsModule { }

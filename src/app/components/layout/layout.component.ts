@@ -1,9 +1,9 @@
 import { Component, Renderer2, ViewChild } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Subscription, filter } from 'rxjs';
-import { AppSidebar } from '../app.sidebar';
 import { LayoutService } from './layout.service';
 import { TopbarComponent } from '../topbar/topbar.component';
+import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
   selector: 'app-layout',
@@ -17,7 +17,7 @@ export class LayoutComponent {
 
     menuOutsideClickListener: any;
 
-    @ViewChild(AppSidebar) appSidebar!: AppSidebar;
+    @ViewChild(SidebarComponent) appSidebar!: SidebarComponent;
 
     @ViewChild(TopbarComponent) appTopBar!: TopbarComponent;
 
